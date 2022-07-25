@@ -8,7 +8,7 @@ public:
             ans = (ans*10)+digit;
             x = x/10;
         }
-        if( (ans>=INT_MIN) and (ans<=INT_MAX) )
+        if( (ans>=INT_MIN) && (ans<=INT_MAX) )
                 return ans;
         else 
             return 0;
