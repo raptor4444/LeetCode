@@ -2,16 +2,13 @@ class Solution {
 public:
     int arrangeCoins(int n) {
         
+        int i=1;
         int count=0;
-        for(int i=1; i<=n; i++){
-            if(n==0)
-                return count;
-            
-            else if(n>=i){
-                n = n-i;
-                count++;
-            }
-            
+        
+        while(n>=i){
+            n-=i;
+            count++;
+            i++;
         }return count;
     }
 };
