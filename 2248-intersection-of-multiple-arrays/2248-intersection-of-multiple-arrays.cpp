@@ -1,0 +1,22 @@
+class Solution {
+public:
+    vector<int> intersection(vector<vector<int>>& nums) {
+        int n=nums.size();
+        map<int,int>m;
+        for(int i=0;i<nums.size();i++){
+            vector<int>n=nums[i];
+            for(int j=0;j<n.size();j++){
+                m[n[j]]++;
+            }
+        }
+        vector<int>v=nums[0];
+        vector<int>V;
+        for(int i=0;i<v.size();i++){
+            if(m[v[i]]==nums.size()){
+                V.push_back(v[i]);
+            }
+        }
+        sort(V.begin(),V.end());
+        return V;
+    }
+};
